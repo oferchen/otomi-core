@@ -112,7 +112,6 @@ Otomi installs, configures, integrates and automates all of your favorite K8s ap
 - Security policies (at the gate and during runtime)
 - Advanced ingress architecture with self-service
 - Network policies for internal ingress and external egress
-- Deploy workloads without writing any YAML
 - Create and manage secrets in Vault and use them in workloads
 - Role-based access to all integrated tools
 - Comprehensive multi-tenant setup
@@ -120,15 +119,25 @@ Otomi installs, configures, integrates and automates all of your favorite K8s ap
 - Expose services on multiple (public/private) networks
 - SOPS/KMS for encryption of sensitive configuration values
 - BYO IdP, DNS and/or CA
-
-And much more...
+- Create Helm and Knative workloads
 ## Otomi Projects
 
-The open source Core of Otomi consists out of the following projects:
+Otomi consists out of the following projects:
+
+### Free & Open source
 
 - Otomi Core (this project): The heart of Otomi
 - [Otomi Tasks](https://github.com/redkubes/otomi-tasks): Autonomous jobs orchestrated by Otomi Core
 - [Otomi Clients](https://github.com/redkubes/otomi-clients): Factory to build and publish openapi clients used in the redkubes/otomi-tasks repo
+
+When installing Otomi, a free (but limited) version of Otomi API and Otomi Console will be available. To use the UI/API, first create an account [here](https://portal.otomi.cloud).
+
+and then clone the bootstrapped Git repo to work on the platform spec locally. See [otomi.io](https://otomi.io) for instructions.
+
+### Commercial
+
+- Otomi API: The brains of Otomi to write validated platform configuration
+- Otomi Console: The UI of Otomi, talking to Otomi API
 
 ## Documentation
 
