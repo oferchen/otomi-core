@@ -1,6 +1,7 @@
 {{- $v := .Values }}
 {{- if $v.apps.argocd.enabled }}
 {{- range $v.workloads }}
+---
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
@@ -34,13 +35,13 @@ spec:
       syncPolicy:
         automated:
           allowEmpty: false
-          prune: true
+          prune: false
           selfHeal: true
         retry:
           backoff:
-            duration: 5s
-            factor: 2
-          limit: 100
+            duration: 10s
+            factor: 3
+          limit: 3
         syncOptions: []
       destination:
         server: 'https://kubernetes.default.svc'
