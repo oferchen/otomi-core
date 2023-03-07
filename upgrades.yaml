@@ -48,7 +48,7 @@ operations:
     post:
       # convert secrets to new format and apply
       - vendor/kes-to-eso/migrate-post.sh && true
-  - version: dev
+  - version: 0.18.1
     pre:
       # we can remove the release because helm does not remove CRDs
       # replace OLM crds because helm won't upgrade them
